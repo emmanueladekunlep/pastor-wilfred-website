@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Pastor Wilfred Aigbomobe | Biography</title>
+    <meta name="description" content="Learn about Pastor Wilfred Aigbomobe - International Preacher, Author, UK Certified Life Coach, and Founder of Global Revival Blast." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* About Page Specific Styles */
+        .page-hero {
+            position: relative;
+            padding: 160px 0 80px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 5, 23, 0.85);
+        }
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+        }
+        .page-hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+        }
+
+        .bio-full {
+            padding: 80px 0;
+            background: var(--primary);
+        }
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .bio-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        .bio-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .bio-text p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+        .bio-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .bio-detail {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        .bio-detail i {
+            color: var(--gold);
+            font-size: 1.1rem;
+            width: 24px;
+        }
+
+        .timeline-section {
+            padding: 80px 0;
+            background: var(--primary-dark);
+        }
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(212, 168, 83, 0.2);
+        }
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-item:nth-child(odd) {
+            align-self: flex-end;
+            justify-content: flex-start;
+            margin-left: 50%;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: 28px;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(odd)::before {
+            left: -8px;
+        }
+        .timeline-item:nth-child(even)::before {
+            right: -8px;
+        }
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 28px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            max-width: 400px;
+        }
+        .timeline-content .year {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .timeline-content h4 {
+            font-size: 1.1rem;
+            margin: 4px 0 8px;
+        }
+        .timeline-content p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.5rem; }
+            .bio-grid { grid-template-columns: 1fr; }
+            .bio-details { grid-template-columns: 1fr; }
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 60px; justify-content: flex-start; margin-left: 0 !important; }
+            .timeline-item:nth-child(odd)::before { left: 12px; }
+            .timeline-item:nth-child(even)::before { left: 12px; right: auto; }
+            .timeline-item:nth-child(odd) .timeline-content { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="logo-img" />
+                <div class="logo-text">
+                    <span class="logo-title">Pastor Wilfred</span>
+                    <span class="logo-sub">Aigbomobe</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="books.html">Books</a>
+                <a href="sermons.html">Sermons</a>
+                <a href="contact.html">Contact</a>
+                <a href="give.html" class="btn-give">Give</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background-image: url('images/church-background.jpg');">
+        <div class="container">
+            <h1 class="animate-fade-up">About Pastor Wilfred</h1>
+            <p class="animate-fade-up delay-1">International Preacher • Author • UK Certified Life Coach</p>
+        </div>
+    </section>
+
+    <section class="bio-full">
+        <div class="container">
+            <div class="bio-grid">
+                <div class="bio-image animate-on-scroll">
+                    <img src="images/pastor-photo.png" alt="Pastor Wilfred Aigbomobe" />
+                </div>
+                <div class="bio-text animate-on-scroll">
+                    <span class="section-tag">Biography</span>
+                    <h2>Called to <span class="highlight">Liberate Souls</span></h2>
+                    <p><strong>Wilfred Abumen Aigbomobe</strong> is a passionate evangelist, international dynamic preacher, author, charismatic leader, and UK certified life coach. He is the founder and host of the <strong>Global Revival Blast</strong> podcast, where he shares inspiring messages aimed at igniting spiritual revival and transformation worldwide.</p>
+                    <p>He has a divine mandate from God and anointing to liberate souls from bondage and help people fulfill their destiny. His life revolves in the work of God and he is an anointed pastor, passionate about prayer, destiny fulfillment, revival and evangelism.</p>
+                    <p>God accompanies his ministrations with great testimonies. Pastor Wilfred's ministrations are characterized by the presence and raw power of the living God that had touched so many souls in Europe and other parts of the world.</p>
+                    
+                    <div class="bio-details">
+                        <div class="bio-detail"><i class="fas fa-user"></i> Wilfred Abumen Aigbomobe</div>
+                        <div class="bio-detail"><i class="fas fa-graduation-cap"></i> D.Min, Ph.D.</div>
+                        <div class="bio-detail"><i class="fas fa-map-marker-alt"></i> London, United Kingdom</div>
+                        <div class="bio-detail"><i class="fas fa-book"></i> Author of 2 Books</div>
+                        <div class="bio-detail"><i class="fas fa-church"></i> Senior Pastor, PLCC</div>
+                        <div class="bio-detail"><i class="fas fa-globe"></i> 15+ Nations Reached</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Journey</span>
+                <h2>Ministry <span class="highlight">Timeline</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="year">2014</div>
+                        <h4>First Book Published</h4>
+                        <p>"The Power of Your Choice" - A guide to making life-changing decisions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll delay-1">
+                    <div class="timeline-content">
+                        <div class="year">2016</div>
+                        <h4>Founded PLCC</h4>
+                        <p>Established Prayer Life Christian Centre in London, UK.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll delay-2">
+                    <div class="timeline-content">
+                        <div class="year">2019</div>
+                        <h4>Ultimate Freedom Released</h4>
+                        <p>Published "Ultimate Freedom" - pathways to live a free life.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll delay-3">
+                    <div class="timeline-content">
+                        <div class="year">2020</div>
+                        <h4>Global Revival Blast Launched</h4>
+                        <p>Started the Global Revival Blast podcast reaching nations worldwide.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll delay-4">
+                    <div class="timeline-content">
+                        <div class="year">2025</div>
+                        <h4>Global Impact</h4>
+                        <p>Ministering across 15+ nations, igniting revival and transforming lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" style="background-image: url('images/cross-and-cross-backgoung.jpg');">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Partner with <span class="highlight">Global Revival</span></h2>
+                <p>Join Pastor Wilfred in reaching souls and fulfilling destinies worldwide.</p>
+                <div class="cta-buttons">
+                    <a href="books.html" class="btn btn-primary"><i class="fas fa-book"></i> Explore Books</a>
+                    <a href="contact.html" class="btn btn-gold"><i class="fas fa-envelope"></i> Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="footer-logo" />
+                <h4>Pastor Wilfred Aigbomobe</h4>
+                <p>International Preacher, Author, and Founder of Global Revival Blast.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="about.html"><i class="fas fa-chevron-right"></i> About</a>
+                <a href="books.html"><i class="fas fa-chevron-right"></i> Books</a>
+                <a href="sermons.html"><i class="fas fa-chevron-right"></i> Sermons</a>
+                <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Reach Out</h4>
+                <a href="mailto:info@plccglobal.com"><i class="fas fa-envelope"></i> info@plccglobal.com</a>
+                <a href="tel:+447473742836"><i class="fas fa-phone"></i> +44 7473 742836</a>
+                <a href="give.html"><i class="fas fa-hand-holding-heart"></i> Support Ministry</a>
+                <a href="https://plccglobal.com/" target="_blank"><i class="fas fa-church"></i> PLCC Global</a>
+            </div>
+            <div class="footer-col">
+                <h4>Statement of Faith</h4>
+                <p>The Bible, Trinity, salvation by grace, water baptism, Holy Ghost baptism, divine healing, second coming of Christ.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Pastor Wilfred Aigbomobe. All rights reserved.</p>
+                <p class="footer-tagline">"Liberating Souls. Making Disciples. Fulfilling Destinies."</p>
+                <p class="design-credit">Website designed with <i class="fas fa-heart" style="color: #d4a853;"></i> for global revival</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

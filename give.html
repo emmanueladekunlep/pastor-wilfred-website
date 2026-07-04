@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Global Revival | Give to Pastor Wilfred Aigbomobe</title>
+    <meta name="description" content="Partner with Pastor Wilfred Aigbomobe to advance soul-winning, missions, and church planting. Support global revival." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .page-hero {
+            position: relative;
+            padding: 160px 0 80px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 5, 23, 0.85);
+        }
+        .page-hero .container { position: relative; z-index: 1; }
+        .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 12px; }
+        .page-hero p { color: rgba(255, 255, 255, 0.7); font-size: 1.2rem; }
+
+        .give-section { padding: 80px 0; background: var(--primary); }
+        .give-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+        .give-info h2 { font-size: 2.2rem; margin-bottom: 16px; }
+        .give-info p { color: rgba(255, 255, 255, 0.6); margin-bottom: 24px; }
+        .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .impact-item {
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+        .impact-item i { font-size: 1.8rem; color: var(--gold); margin-bottom: 8px; }
+        .impact-item h4 { font-size: 0.95rem; }
+        .impact-item p { font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); margin: 0; }
+
+        .give-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+        }
+        .give-card .icon { font-size: 3rem; color: var(--gold); margin-bottom: 12px; }
+        .give-card h3 { font-size: 1.5rem; }
+        .give-card p { color: rgba(255, 255, 255, 0.5); margin: 8px 0 24px; }
+        .give-card .btn { width: 100%; justify-content: center; }
+
+        .ways-section { padding: 80px 0; background: var(--primary-dark); }
+        .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .way-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+        .way-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 168, 83, 0.2);
+        }
+        .way-card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 12px; }
+        .way-card h4 { font-size: 1.1rem; }
+        .way-card p { color: rgba(255, 255, 255, 0.4); font-size: 0.9rem; }
+        .way-card .btn { margin-top: 12px; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.5rem; }
+            .give-grid { grid-template-columns: 1fr; }
+            .impact-grid { grid-template-columns: 1fr; }
+            .ways-grid { grid-template-columns: 1fr; }
+            .give-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="logo-img" />
+                <div class="logo-text">
+                    <span class="logo-title">Pastor Wilfred</span>
+                    <span class="logo-sub">Aigbomobe</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="books.html">Books</a>
+                <a href="sermons.html">Sermons</a>
+                <a href="contact.html">Contact</a>
+                <a href="give.html" class="active btn-give">Give</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background-image: url('images/church-background.jpg');">
+        <div class="container">
+            <h1 class="animate-fade-up">Support Global Revival</h1>
+            <p class="animate-fade-up delay-1">Partner with us to advance soul-winning, missions, and church planting</p>
+        </div>
+    </section>
+
+    <section class="give-section">
+        <div class="container">
+            <div class="give-grid">
+                <div class="give-info animate-on-scroll">
+                    <span class="section-tag">Give</span>
+                    <h2>Why Your <span class="highlight">Giving Matters</span></h2>
+                    <p>Your partnership helps us advance the Kingdom of God through soul-winning, discipleship, and church planting across the nations.</p>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <i class="fas fa-church"></i>
+                            <h4>Plant Churches</h4>
+                            <p>Establishing new churches in unreached communities</p>
+                        </div>
+                        <div class="impact-item">
+                            <i class="fas fa-globe"></i>
+                            <h4>Global Missions</h4>
+                            <p>Sending missionaries with the Gospel</p>
+                        </div>
+                        <div class="impact-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Discipleship</h4>
+                            <p>Equipping believers to become mature disciples</p>
+                        </div>
+                        <div class="impact-item">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h4>Community Outreach</h4>
+                            <p>Providing for the needs of the vulnerable</p>
+                        </div>
+                    </div>
+                    <p style="margin-top:20px; font-style:italic; color:var(--gold);">
+                        <i class="fas fa-bible"></i> "God loves a cheerful giver." — 2 Corinthians 9:7
+                    </p>
+                </div>
+
+                <div class="give-card animate-on-scroll delay-1">
+                    <div class="icon"><i class="fas fa-mug-hot"></i></div>
+                    <h3>Buy Me a Coffee</h3>
+                    <p>Make a one-time or recurring contribution to fuel global revival.</p>
+                    <a href="https://buymeacoffee.com/globalrevivalblast" target="_blank" class="btn btn-gold">
+                        <i class="fas fa-coffee"></i> Support on Buy Me a Coffee
+                    </a>
+                    <p style="margin-top:16px; font-size:0.85rem; color:rgba(255,255,255,0.3);">
+                        <i class="fas fa-info-circle"></i> Prefer bank transfer? <a href="contact.html" style="color:var(--gold);">Contact us</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ways-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Ways to Give</span>
+                <h2>Choose Your <span class="highlight">Partnership</span></h2>
+            </div>
+            <div class="ways-grid">
+                <div class="way-card animate-on-scroll">
+                    <i class="fas fa-coffee"></i>
+                    <h4>Buy Me a Coffee</h4>
+                    <p>Quick and easy one-time or monthly giving.</p>
+                    <a href="https://buymeacoffee.com/globalrevivalblast" target="_blank" class="btn btn-small btn-gold">Give Now</a>
+                </div>
+                <div class="way-card animate-on-scroll delay-1">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Bank Transfer</h4>
+                    <p>Contact us for direct bank transfer details.</p>
+                    <a href="contact.html" class="btn btn-small btn-primary">Contact Us</a>
+                </div>
+                <div class="way-card animate-on-scroll delay-2">
+                    <i class="fas fa-praying-hands"></i>
+                    <h4>Prayer Partnership</h4>
+                    <p>Join us in prayer for global revival.</p>
+                    <a href="contact.html" class="btn btn-small btn-primary">Pray With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" style="background-image: url('images/cross-and-cross-backgoung.jpg');">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Partner with <span class="highlight">Global Revival</span></h2>
+                <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."</p>
+                <div class="cta-buttons">
+                    <a href="https://buymeacoffee.com/globalrevivalblast" target="_blank" class="btn btn-primary"><i class="fas fa-hand-holding-heart"></i> Give Now</a>
+                    <a href="contact.html" class="btn btn-gold"><i class="fas fa-praying-hands"></i> Pray With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="footer-logo" />
+                <h4>Pastor Wilfred Aigbomobe</h4>
+                <p>International Preacher, Author, and Founder of Global Revival Blast.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="about.html"><i class="fas fa-chevron-right"></i> About</a>
+                <a href="books.html"><i class="fas fa-chevron-right"></i> Books</a>
+                <a href="sermons.html"><i class="fas fa-chevron-right"></i> Sermons</a>
+                <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Reach Out</h4>
+                <a href="mailto:info@plccglobal.com"><i class="fas fa-envelope"></i> info@plccglobal.com</a>
+                <a href="tel:+447473742836"><i class="fas fa-phone"></i> +44 7473 742836</a>
+                <a href="give.html"><i class="fas fa-hand-holding-heart"></i> Support Ministry</a>
+                <a href="https://plccglobal.com/" target="_blank"><i class="fas fa-church"></i> PLCC Global</a>
+            </div>
+            <div class="footer-col">
+                <h4>Statement of Faith</h4>
+                <p>The Bible, Trinity, salvation by grace, water baptism, Holy Ghost baptism, divine healing, second coming of Christ.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Pastor Wilfred Aigbomobe. All rights reserved.</p>
+                <p class="footer-tagline">"Liberating Souls. Making Disciples. Fulfilling Destinies."</p>
+                <p class="design-credit">Website designed with <i class="fas fa-heart" style="color: #d4a853;"></i> for global revival</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

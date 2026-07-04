@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sermons | Pastor Wilfred Aigbomobe | Global Revival Blast Podcast</title>
+    <meta name="description" content="Listen to sermons and teachings from Pastor Wilfred Aigbomobe. Global Revival Blast podcast - igniting spiritual revival worldwide." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .page-hero {
+            position: relative;
+            padding: 160px 0 80px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 5, 23, 0.85);
+        }
+        .page-hero .container { position: relative; z-index: 1; }
+        .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 12px; }
+        .page-hero p { color: rgba(255, 255, 255, 0.7); font-size: 1.2rem; }
+
+        .podcast-section { padding: 80px 0; background: var(--primary); }
+        .podcast-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .podcast-wrapper h2 { font-size: 2rem; margin-bottom: 8px; }
+        .podcast-wrapper .sub { color: rgba(255, 255, 255, 0.5); margin-bottom: 30px; }
+        .podcast-embed { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+
+        .episodes-section { padding: 80px 0; background: var(--primary-dark); }
+        .episodes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
+        .episode-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: var(--transition);
+        }
+        .episode-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 168, 83, 0.2);
+        }
+        .episode-card .number { color: var(--gold); font-weight: 700; font-size: 0.8rem; }
+        .episode-card h3 { font-size: 1.1rem; margin: 4px 0 8px; }
+        .episode-card .meta { color: rgba(255, 255, 255, 0.3); font-size: 0.85rem; margin-bottom: 8px; }
+        .episode-card .meta i { margin-right: 4px; }
+        .episode-card p { color: rgba(255, 255, 255, 0.5); font-size: 0.95rem; margin-bottom: 12px; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.5rem; }
+            .episodes-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="logo-img" />
+                <div class="logo-text">
+                    <span class="logo-title">Pastor Wilfred</span>
+                    <span class="logo-sub">Aigbomobe</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="books.html">Books</a>
+                <a href="sermons.html" class="active">Sermons</a>
+                <a href="contact.html">Contact</a>
+                <a href="give.html" class="btn-give">Give</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background-image: url('images/church-background.jpg');">
+        <div class="container">
+            <h1 class="animate-fade-up">Sermons & Podcast</h1>
+            <p class="animate-fade-up delay-1">Anointed teachings, prophetic declarations, and worship encounters</p>
+        </div>
+    </section>
+
+    <section class="podcast-section">
+        <div class="container">
+            <div class="podcast-wrapper animate-on-scroll">
+                <span class="section-tag">Global Revival Blast</span>
+                <h2>Listen to <span class="highlight">Latest Sermons</span></h2>
+                <p class="sub">Stay connected with the word. New episodes uploaded weekly.</p>
+                <div class="podcast-embed">
+                    <iframe src="https://www.buzzsprout.com/2280674/embed" width="100%" height="320" frameborder="0" scrolling="no" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="episodes-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Recent Episodes</span>
+                <h2>Featured <span class="highlight">Teachings</span></h2>
+            </div>
+            <div class="episodes-grid">
+                <div class="episode-card animate-on-scroll">
+                    <div class="number">Episode 01</div>
+                    <h3>Finding Peace in the Storm</h3>
+                    <div class="meta"><i class="fas fa-calendar"></i> June 2026 <i class="fas fa-clock" style="margin-left:12px;"></i> 28 min</div>
+                    <p>Discover how to find peace and stability in the midst of life's storms.</p>
+                    <a href="https://www.buzzsprout.com/2280674" target="_blank" class="btn btn-small btn-gold">Listen Now →</a>
+                </div>
+                <div class="episode-card animate-on-scroll delay-1">
+                    <div class="number">Episode 02</div>
+                    <h3>You Are Not Alone</h3>
+                    <div class="meta"><i class="fas fa-calendar"></i> June 2026 <i class="fas fa-clock" style="margin-left:12px;"></i> 32 min</div>
+                    <p>A message of hope and encouragement for those feeling isolated.</p>
+                    <a href="https://www.buzzsprout.com/2280674" target="_blank" class="btn btn-small btn-gold">Listen Now →</a>
+                </div>
+                <div class="episode-card animate-on-scroll delay-2">
+                    <div class="number">Episode 03</div>
+                    <h3>Healing From Within</h3>
+                    <div class="meta"><i class="fas fa-calendar"></i> May 2026 <i class="fas fa-clock" style="margin-left:12px;"></i> 25 min</div>
+                    <p>Experience inner healing and restoration through the power of God's Word.</p>
+                    <a href="https://www.buzzsprout.com/2280674" target="_blank" class="btn btn-small btn-gold">Listen Now →</a>
+                </div>
+                <div class="episode-card animate-on-scroll delay-3">
+                    <div class="number">Episode 04</div>
+                    <h3>The Power of Prayer</h3>
+                    <div class="meta"><i class="fas fa-calendar"></i> May 2026 <i class="fas fa-clock" style="margin-left:12px;"></i> 30 min</div>
+                    <p>Discover the transformative power of prayer and how it can change your life.</p>
+                    <a href="https://www.buzzsprout.com/2280674" target="_blank" class="btn btn-small btn-gold">Listen Now →</a>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:40px;">
+                <a href="https://www.buzzsprout.com/2280674" target="_blank" class="btn btn-primary"><i class="fas fa-headphones"></i> View All Episodes</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" style="background-image: url('images/cross-and-cross-backgoung.jpg');">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Share Your <span class="highlight">Testimony</span></h2>
+                <p>Have you been touched by these messages? We'd love to hear your story.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary"><i class="fas fa-praying-hands"></i> Share Your Story</a>
+                    <a href="give.html" class="btn btn-gold"><i class="fas fa-hand-holding-heart"></i> Support Revival</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="footer-logo" />
+                <h4>Pastor Wilfred Aigbomobe</h4>
+                <p>International Preacher, Author, and Founder of Global Revival Blast.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="about.html"><i class="fas fa-chevron-right"></i> About</a>
+                <a href="books.html"><i class="fas fa-chevron-right"></i> Books</a>
+                <a href="sermons.html"><i class="fas fa-chevron-right"></i> Sermons</a>
+                <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Reach Out</h4>
+                <a href="mailto:info@plccglobal.com"><i class="fas fa-envelope"></i> info@plccglobal.com</a>
+                <a href="tel:+447473742836"><i class="fas fa-phone"></i> +44 7473 742836</a>
+                <a href="give.html"><i class="fas fa-hand-holding-heart"></i> Support Ministry</a>
+                <a href="https://plccglobal.com/" target="_blank"><i class="fas fa-church"></i> PLCC Global</a>
+            </div>
+            <div class="footer-col">
+                <h4>Statement of Faith</h4>
+                <p>The Bible, Trinity, salvation by grace, water baptism, Holy Ghost baptism, divine healing, second coming of Christ.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Pastor Wilfred Aigbomobe. All rights reserved.</p>
+                <p class="footer-tagline">"Liberating Souls. Making Disciples. Fulfilling Destinies."</p>
+                <p class="design-credit">Website designed with <i class="fas fa-heart" style="color: #d4a853;"></i> for global revival</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
