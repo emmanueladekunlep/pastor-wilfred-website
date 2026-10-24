@@ -1096,3 +1096,41 @@ footer {
         white-space: normal;
     }
 }
+/* ===== e.a.Peace Credit ===== */
+.eapeace-credit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 16px 32px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.62;
+  transition: opacity 0.3s ease;
+}
+.eapeace-credit:hover { opacity: 0.95; }
+.eapeace-credit__divider {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+}
+.eapeace-credit__text { line-height: 1.6; }
+.eapeace-credit__link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+.eapeace-credit__link:hover,
+.eapeace-credit__link:focus-visible {
+  border-bottom-color: currentColor;
+  outline: none;
+}
+/* ===== /e.a.Peace Credit ===== */

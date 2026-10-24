@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books by Pastor Wilfred Aigbomobe | The Power of Your Choice & Ultimate Freedom</title>
+    <meta name="description" content="Explore books by Pastor Wilfred Aigbomobe - The Power of Your Choice and Ultimate Freedom. Life-changing resources for decision-making and freedom." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .page-hero {
+            position: relative;
+            padding: 160px 0 80px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 5, 23, 0.85);
+        }
+        .page-hero .container { position: relative; z-index: 1; }
+        .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 12px; }
+        .page-hero p { color: rgba(255, 255, 255, 0.7); font-size: 1.2rem; }
+
+        .books-full { padding: 80px 0; background: var(--primary); }
+        .books-full-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .book-full-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: var(--transition);
+        }
+        .book-full-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 168, 83, 0.3);
+            box-shadow: var(--shadow-gold);
+        }
+        .book-full-image {
+            height: 350px;
+            overflow: hidden;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .book-full-image img {
+            height: 100%;
+            object-fit: contain;
+            padding: 20px;
+            transition: var(--transition);
+        }
+        .book-full-card:hover .book-full-image img { transform: scale(1.05); }
+        .book-full-info { padding: 32px; }
+        .book-full-info h2 { font-size: 1.8rem; margin-bottom: 8px; }
+        .book-full-info .subtitle { color: var(--gold); font-size: 1rem; margin-bottom: 12px; }
+        .book-full-info .description { color: rgba(255, 255, 255, 0.7); font-size: 1rem; margin-bottom: 16px; }
+        .book-full-info .details { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+        .book-full-info .details span { color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; }
+        .book-full-info .details i { color: var(--gold); margin-right: 6px; width: 20px; }
+        .book-full-info .btn { width: 100%; justify-content: center; }
+
+        .author-notes { padding: 80px 0; background: var(--primary-dark); }
+        .author-notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .author-note-card {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .author-note-card i { font-size: 3rem; color: var(--gold); margin-bottom: 16px; }
+        .author-note-card h4 { font-size: 1.2rem; margin-bottom: 8px; }
+        .author-note-card p { color: rgba(255, 255, 255, 0.5); }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.5rem; }
+            .books-full-grid { grid-template-columns: 1fr; }
+            .book-full-image { height: 250px; }
+            .book-full-info .details { grid-template-columns: 1fr; }
+            .author-notes-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="logo-img" />
+                <div class="logo-text">
+                    <span class="logo-title">Pastor Wilfred</span>
+                    <span class="logo-sub">Aigbomobe</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="books.html" class="active">Books</a>
+                <a href="sermons.html">Sermons</a>
+                <a href="contact.html">Contact</a>
+                <a href="give.html" class="btn-give">Give</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background-image: url('images/church-background.jpg');">
+        <div class="container">
+            <h1 class="animate-fade-up">Life-Changing Books</h1>
+            <p class="animate-fade-up delay-1">Practical guides to transform your decisions and experience ultimate freedom</p>
+        </div>
+    </section>
+
+    <section class="books-full">
+        <div class="container">
+            <div class="books-full-grid">
+                <!-- Book 1 -->
+                <div class="book-full-card animate-on-scroll">
+                    <div class="book-full-image">
+                        <img src="images/power of your choice book.png" alt="The Power of Your Choice" />
+                    </div>
+                    <div class="book-full-info">
+                        <span class="section-tag">Bestseller</span>
+                        <h2>The Power of Your Choice</h2>
+                        <p class="subtitle">Improve your life by making better decisions</p>
+                        <p class="description">Have you ever asked yourself how can you make decisions that will lead you to success and greatness? This book is a practical guide to live wisely and improve your life. It will show you how to spot the pitfall of wrong decisions and choices, how to avoid it and create the success you so much desire.</p>
+                        <div class="details">
+                            <span><i class="fas fa-calendar"></i> Published: 2014</span>
+                            <span><i class="fas fa-star gold-text"></i> 4.5/5 Rating</span>
+                            <span><i class="fas fa-users"></i> 2,000+ Readers</span>
+                            <span><i class="fas fa-language"></i> English</span>
+                        </div>
+                        <a href="https://www.amazon.com/power-your-choice-Improve-decisions/dp/147524911X" target="_blank" class="btn btn-gold">
+                            <i class="fab fa-amazon"></i> Buy on Amazon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Book 2 -->
+                <div class="book-full-card animate-on-scroll delay-1">
+                    <div class="book-full-image">
+                        <img src="images/altimate freedom book.png" alt="Ultimate Freedom" />
+                    </div>
+                    <div class="book-full-info">
+                        <span class="section-tag">New Release</span>
+                        <h2>Ultimate Freedom</h2>
+                        <p class="subtitle">Pathways to live a free life and full of hope</p>
+                        <p class="description">Ultimate Freedom is the antidote to the numerous and repeated failures at the edge of breakthroughs, oppression and afflictions so many people experience. This book is the key to your total deliverance from satanic bondage. It teaches you how to obtain your freedom and enjoy God's favour.</p>
+                        <div class="details">
+                            <span><i class="fas fa-calendar"></i> Published: 2019</span>
+                            <span><i class="fas fa-star gold-text"></i> 4.7/5 Rating</span>
+                            <span><i class="fas fa-users"></i> 1,500+ Readers</span>
+                            <span><i class="fas fa-language"></i> English</span>
+                        </div>
+                        <a href="https://www.amazon.com/Ultimate-Freedom-Wilfred-Abumen-Aigbomobe-ebook/dp/B083C5H38D" target="_blank" class="btn btn-gold">
+                            <i class="fab fa-amazon"></i> Buy on Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="author-notes">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">From the Author</span>
+                <h2>Why I <span class="highlight">Wrote These Books</span></h2>
+            </div>
+            <div class="author-notes-grid">
+                <div class="author-note-card animate-on-scroll">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>The Power of Your Choice</h4>
+                    <p>"One decision can change the story of your life forever. This book is designed to help you make wise decisions that lead to success and breakthroughs."</p>
+                </div>
+                <div class="author-note-card animate-on-scroll delay-1">
+                    <i class="fas fa-dove"></i>
+                    <h4>Ultimate Freedom</h4>
+                    <p>"God's plan is for you to live in freedom and prosperity. This book will guide you to total deliverance and help you walk in the fullness of God's purpose."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" style="background-image: url('images/cross-and-cross-backgoung.jpg');">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Start Your <span class="highlight">Transformation</span> Today</h2>
+                <p>Get your copy of these life-changing books and begin your journey to wisdom and freedom.</p>
+                <div class="cta-buttons">
+                    <a href="https://www.amazon.com/power-your-choice-Improve-decisions/dp/147524911X" target="_blank" class="btn btn-primary"><i class="fab fa-amazon"></i> Buy Both Books</a>
+                    <a href="contact.html" class="btn btn-gold"><i class="fas fa-envelope"></i> Contact Pastor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="images/plc-logo.png" alt="PLCC Logo" class="footer-logo" />
+                <h4>Pastor Wilfred Aigbomobe</h4>
+                <p>International Preacher, Author, and Founder of Global Revival Blast.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="about.html"><i class="fas fa-chevron-right"></i> About</a>
+                <a href="books.html"><i class="fas fa-chevron-right"></i> Books</a>
+                <a href="sermons.html"><i class="fas fa-chevron-right"></i> Sermons</a>
+                <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Reach Out</h4>
+                <a href="mailto:info@plccglobal.com"><i class="fas fa-envelope"></i> info@plccglobal.com</a>
+                <a href="tel:+447473742836"><i class="fas fa-phone"></i> +44 7473 742836</a>
+                <a href="give.html"><i class="fas fa-hand-holding-heart"></i> Support Ministry</a>
+                <a href="https://plccglobal.com/" target="_blank"><i class="fas fa-church"></i> PLCC Global</a>
+            </div>
+            <div class="footer-col">
+                <h4>Statement of Faith</h4>
+                <p>The Bible, Trinity, salvation by grace, water baptism, Holy Ghost baptism, divine healing, second coming of Christ.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Pastor Wilfred Aigbomobe. All rights reserved.</p>
+                <p class="footer-tagline">"Liberating Souls. Making Disciples. Fulfilling Destinies."</p>
+                <p class="design-credit">Website designed with <i class="fas fa-heart" style="color: #d4a853;"></i> for global revival</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
